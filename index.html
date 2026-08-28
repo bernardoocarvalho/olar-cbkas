@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emissor de Mensagens</title>
+    <title>Pra você!</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            /* Troque 'fundo.jpg' pelo nome exato da sua imagem */
+            background-image: url('IMG_20260703_102612.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,67 +19,33 @@
             margin: 0;
         }
         .card {
-            background-color: #161b22;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            border: 1px solid #30363d;
-            width: 320px;
+            background-color: rgba(22, 27, 34, 0.85); /* Fundo semi-transparente */
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            width: 350px;
             text-align: center;
         }
-        h2 { color: #58a6ff; margin-bottom: 1rem; }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            background-color: #0d1117;
-            color: #fff;
-            box-sizing: border-box;
-            margin-bottom: 1rem;
+        h2 { 
+            color: #ff7b72; 
+            margin-bottom: 1rem; 
         }
-        button {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: none;
-            background-color: #238636;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        button:hover { background-color: #2ea043; }
-        .output {
-            margin-top: 1.5rem;
-            padding: 10px;
-            border-radius: 6px;
-            background-color: #21262d;
-            word-wrap: break-word;
-            display: none;
+        p {
+            color: #e6edf3;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Enviar Mensagem</h2>
-        <input type="text" id="mensagemInput" placeholder="Digite sua mensagem aqui...">
-        <button onclick="emitirMensagem()">Emitir</button>
-        <div id="painelSaida" class="output"></div>
+        <h2>Mensagem Especial ❤️</h2>
+        <p>Eu te amo meu amor!</p>
     </div>
 
-    <script>
-        function emitirMensagem() {
-            const input = document.getElementById('mensagemInput');
-            const painel = document.getElementById('painelSaida');
-
-            if (input.value.trim() !== "") {
-                painel.innerText = input.value;
-                painel.style.display = "block";
-                input.value = ""; // Limpa o campo após enviar
-            }
-        }
-    </script>
 </body>
 </html>
